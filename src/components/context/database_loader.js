@@ -9,8 +9,8 @@ import { NotificationContext } from './notification_wrapper.js'
 const DatabaseLoader = ( {children} ) => {
 
     // === STATE HOOK ===
-    const { setAboutDb } = useContext( AboutContext );
-    const { setGalleryDB } = useContext( GalleryContext );
+    const { SetAboutContent } = useContext( AboutContext );
+    const { SetGalleryContent } = useContext( GalleryContext );
     const { ShowNotification } = useContext( NotificationContext );
 
     // === FUNCTIONS ===
@@ -42,9 +42,9 @@ const DatabaseLoader = ( {children} ) => {
     const ParseJson = useCallback( ( json_data ) => {
         console.log('Parsed JSON Data:', json_data);
 
-        setAboutDb( json_data[ 'About' ] );
-        setGalleryDB( json_data[ 'Gallery' ] );
-    }, [ setAboutDb, setGalleryDB ] );
+        SetAboutContent( json_data[ 'About' ] );
+        SetGalleryContent( json_data[ 'Gallery' ] );
+    }, [ SetAboutContent, SetGalleryContent ] );
 
     // === EFFECT HOOKS ===
     /**

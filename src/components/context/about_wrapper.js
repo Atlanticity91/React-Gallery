@@ -22,6 +22,9 @@ const AboutDbWrapper = ( { children } ) => {
     const [ about, setAboutDb ] = useState( null );
 
     // === FUNCTIONS ===
+    const SetAboutContent = useCallback( ( json_data ) => {
+        setAboutDb( { ...about, json_data } );
+    }, [ about, setAboutDb ] );
     /**
      * GetAbout function
      * @note : Get current about content.

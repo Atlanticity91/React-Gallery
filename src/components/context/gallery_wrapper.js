@@ -22,6 +22,9 @@ const GalleryDbWrapper = ( { children } ) => {
     const [ gallery, setGalleryDB ] = useState( null )
 
     // === FUNCTIONS ===
+    const SetGalleryContent = useCallback( ( json_data ) => {
+        setGalleryDB( { ...gallery, json_data } );
+    }, [ gallery, setGalleryDB ] );
     /**
      * GetGallery function
      * @note : Get current gallery content.

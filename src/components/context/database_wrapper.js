@@ -1,5 +1,5 @@
 // === REACT INCLUDES ===
-import React, { useContext, useCallback, useEffect } from 'react'
+import React from 'react'
 
 // === INCLUDES ===
 import AboutDbWrapper from './about_wrapper.js'
